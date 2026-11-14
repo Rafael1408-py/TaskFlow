@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow | Gerenciador de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <header class="header">
+            <div>
+                <p class="subtitle">ORGANIZE SUA ROTINA</p>
+                <h1>TaskFlow<span>.</span></h1>
+                <p class="description">Um passo de cada vez.</p>
+            </div>
+            <div class="icon">✓</div>
+        </header>
+
+        <section class="stats">
+            <div class="stat-card">
+                <p>Total de tarefas</p>
+                <h2 id="total">0</h2>
+            </div>
+            <div class="stat-card">
+                <p>Concluídas</p>
+                <h2 id="completed">0</h2>
+            </div>
+            <div class="stat-card">
+                <p>Pendentes</p>
+                <h2 id="pending">0</h2>
+            </div>
+        </section>
+
+        <section class="task-section">
+            <h2>Minhas tarefas</h2>
+
+            <form id="task-form">
+                <input
+                    type="text"
+                    id="task-input"
+                    placeholder="O que você precisa fazer?"
+                    maxlength="120"
+                    required
+                >
+                <button type="submit">Adicionar +</button>
+            </form>
+
+            <nav class="filters">
+                <button class="filter active" data-filter="all">
+                    Todas
+                </button>
+                <button class="filter" data-filter="pending">
+                    Pendentes
+                </button>
+                <button class="filter" data-filter="completed">
+                    Concluídas
+                </button>
+            </nav>
+
+            <ul id="task-list"></ul>
+
+            <p id="empty-message">
+                Nenhuma tarefa por aqui. Adicione a primeira!
+            </p>
+        </section>
+
+        <footer>
+            Desenvolvido com HTML, CSS e JavaScript.
+        </footer>
+    </main>
+</body>
+</html>
